@@ -6,11 +6,10 @@ use SP\DriverTest\CrawlerDriverTest;
 use SP\Driver\GuzzleCrawler;
 
 /**
- * @covers SP\Driver\CurlLoader::send
- * @covers SP\Driver\CurlLoader::getConvertedHeaders
- * @covers SP\Driver\CurlLoader::setBase
- * @covers SP\Driver\CurlLoader::getBase
- * @covers SP\Driver\CurlLoader::getCurrentUri
+ * @covers SP\Driver\GuzzleLoader::send
+ * @covers SP\Driver\GuzzleLoader::getClient
+ * @covers SP\Driver\GuzzleLoader::updateBaseUri
+ * @covers SP\Driver\GuzzleLoader::getCurrentUri
  */
 class IntegrationTest extends CrawlerDriverTest
 {
