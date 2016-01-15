@@ -1,10 +1,10 @@
 <?php
 
-namespace SP\Driver;
+namespace SP\GuzzleDriver;
 
 use SP\Crawler\LoaderInterface;
 use GuzzleHttp\Psr7\Uri;
-use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\ServerRequestInterface;
 use Psr\Http\Message\UriInterface;
 use GuzzleHttp\Client;
 
@@ -13,7 +13,7 @@ use GuzzleHttp\Client;
  * @copyright 2015, Clippings Ltd.
  * @license   http://spdx.org/licenses/BSD-3-Clause
  */
-class GuzzleLoader implements LoaderInterface
+class Loader implements LoaderInterface
 {
     const USER_AGENT = 'Spiderling Simple Driver';
 
@@ -47,9 +47,9 @@ class GuzzleLoader implements LoaderInterface
     }
 
     /**
-     * @param  RequestInterface $request
+     * @param  ServerRequestInterface $request
      */
-    public function send(RequestInterface $request)
+    public function send(ServerRequestInterface $request)
     {
         $this->currentUri = $request->getUri();
         $this->updateBaseUri($this->currentUri);

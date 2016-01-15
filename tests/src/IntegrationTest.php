@@ -1,15 +1,12 @@
 <?php
 
-namespace SP\Driver\Test;
+namespace SP\GuzzleDriver\Test;
 
 use SP\DriverTest\CrawlerDriverTest;
-use SP\Driver\GuzzleCrawler;
+use SP\GuzzleDriver\Crawler;
 
 /**
- * @covers SP\Driver\GuzzleLoader::send
- * @covers SP\Driver\GuzzleLoader::getClient
- * @covers SP\Driver\GuzzleLoader::updateBaseUri
- * @covers SP\Driver\GuzzleLoader::getCurrentUri
+ * @covers SP\GuzzleDriver\Loader
  */
 class IntegrationTest extends CrawlerDriverTest
 {
@@ -19,6 +16,6 @@ class IntegrationTest extends CrawlerDriverTest
 
         usleep(50000);
 
-        self::setDriver(new GuzzleCrawler());
+        self::setDriver(new Crawler());
     }
 }

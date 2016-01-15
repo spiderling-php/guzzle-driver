@@ -1,8 +1,8 @@
 <?php
 
-namespace SP\Driver;
+namespace SP\GuzzleDriver;
 
-use SP\Crawler\Crawler;
+use SP\Crawler\Crawler as BaseCrawler;
 use DOMDocument;
 
 /**
@@ -10,7 +10,7 @@ use DOMDocument;
  * @copyright 2015, Clippings Ltd.
  * @license   http://spdx.org/licenses/BSD-3-Clause
  */
-class GuzzleCrawler extends Crawler
+class Crawler extends BaseCrawler
 {
     /**
      * @param DOMDocument|null $document
@@ -21,6 +21,6 @@ class GuzzleCrawler extends Crawler
             $document = new DOMDocument('1.0', 'UTF-8');
         }
 
-        parent::__construct(new GuzzleLoader(), $document);
+        parent::__construct(new Loader(), $document);
     }
 }
