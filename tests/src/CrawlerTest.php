@@ -7,7 +7,7 @@ use PHPUnit_Framework_TestCase;
 use DOMDocument;
 
 /**
- * @coversDefaultClass SP\GuzzleDriver\GuzzleCrawler
+ * @coversDefaultClass SP\GuzzleDriver\Crawler
  */
 class CrawlerTest extends PHPUnit_Framework_TestCase
 {
